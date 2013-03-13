@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal|center"
+    android:orientation="vertical"
+     android:background="@color/background"
+    tools:context=".CreateBookNavigationActivity" >
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:drawableLeft="@drawable/create_book_button"
+        android:textColorLink="@android:color/darker_gray" 
+        android:onClick="addBook"
+       	android:paddingTop="5dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingBottom="5dip"/>
+
+</LinearLayout>

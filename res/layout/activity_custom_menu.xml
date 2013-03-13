@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_gravity="bottom"
+    android:id="@+id/menuPopup"
+    android:background="@drawable/tl_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="90dp"
+    android:layout_alignParentBottom="true">  
+    <TabHost
+		android:id="@android:id/tabhost" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent">
+		<View 
+			android:layout_width="fill_parent" 
+			android:layout_height="0.5dip"
+			android:background="#000">
+		</View>
+		<TabWidget 
+			android:id="@android:id/tabs"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:layout_marginLeft="0dip" 
+			android:layout_marginRight="0dip">
+		</TabWidget>
+		<View 
+			android:layout_width="fill_parent" 
+			android:layout_height="2dip"
+			android:background="#696969">
+		</View>
+		<View 
+			android:layout_width="fill_parent" 
+			android:layout_height="2dip"
+			android:background="#000">
+		</View>
+		<FrameLayout 
+			android:id="@android:id/tabcontent"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent">
+		</FrameLayout>
+	</LinearLayout>
+</TabHost>
+</RelativeLayout>

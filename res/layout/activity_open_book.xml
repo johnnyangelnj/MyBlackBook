@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="horizontal"
+    android:id="@+id/openBookMainLayout" >
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_gravity="top"
+	    android:id="@+id/openBookPopup"
+	    android:background="@drawable/tl_bg"
+	    android:layout_width="fill_parent"
+	    android:layout_height="90dp">  
+	    <TabHost
+			android:id="@android:id/tabhost" 
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+		<LinearLayout 
+			android:orientation="vertical"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent">
+			<View 
+				android:layout_width="fill_parent" 
+				android:layout_height="0.5dip"
+				android:background="#000">
+			</View>
+			<TabWidget 
+				android:id="@android:id/tabs"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"
+				android:layout_marginLeft="0dip" 
+				android:layout_marginRight="0dip">
+			</TabWidget>
+			<View 
+				android:layout_width="fill_parent" 
+				android:layout_height="2dip"
+				android:background="#696969">
+			</View>
+			<View 
+				android:layout_width="fill_parent" 
+				android:layout_height="2dip"
+				android:background="#000">
+			</View>
+			<FrameLayout 
+				android:id="@android:id/tabcontent"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent">
+			</FrameLayout>
+		</LinearLayout>
+	</TabHost>
+	</RelativeLayout>
+	<ScrollView
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@color/background">
+	
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    xmlns:tools="http://schemas.android.com/tools"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@color/background"
+		    android:orientation="horizontal"
+		    android:id="@+id/openBookContentLayout" >
+
+		</LinearLayout>
+
+	</ScrollView>
+		
+</LinearLayout>

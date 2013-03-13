@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:book id="1" xmlns:tns="http://www.example.org/MyBlackBook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/MyBlackBook MyBlackBook.xsd ">
+  <tns:title>tns:title</tns:title>
+  <tns:image_id id="1">
+    <tns:uri>tns:uri</tns:uri>
+  </tns:image_id>
+  <tns:password id="1">
+    <tns:passcode>tns:passcode</tns:passcode>
+    <tns:expire_date>tns:expire_date</tns:expire_date>
+  </tns:password>
+  <tns:modify_date>tns:modify_date</tns:modify_date>
+  <tns:create_date>tns:create_date</tns:create_date>
+  <tns:password_recovery id="1">
+    <tns:security id="1">
+      <tns:question>tns:question</tns:question>
+      <tns:answer>tns:answer</tns:answer>
+    </tns:security>
+  </tns:password_recovery>
+  <tns:contacts id="1">
+    <tns:contact id="1">
+      <tns:name id="1" type="Mr">
+        <tns:display>tns:display</tns:display>
+        <tns:first>tns:first</tns:first>
+      </tns:name>
+      <tns:birth_date>tns:birth_date</tns:birth_date>
+    </tns:contact>
+  </tns:contacts>
+  <tns:images id="1">
+    <tns:image id="1">
+      <tns:name>tns:name</tns:name>
+      <tns:desctiption>tns:desctiption</tns:desctiption>
+      <tns:size>1</tns:size>
+      <tns:uri>tns:uri</tns:uri>
+    </tns:image>
+  </tns:images>
+  <tns:notes id="1">
+    <tns:note id="1">
+      <tns:title>tns:title</tns:title>
+      <tns:desctiption>tns:desctiption</tns:desctiption>
+      <tns:modify_date>tns:modify_date</tns:modify_date>
+      <tns:create_date>tns:create_date</tns:create_date>
+      <tns:message>tns:message</tns:message>
+    </tns:note>
+  </tns:notes>
+</tns:book>

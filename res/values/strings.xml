@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My Black Book</string>
+    <string name="status">Status: </string>
+    <string name="imageDescription">My Black Book Image</string>
+    <string name="add_button">Add</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="title_activity_create_book_navigation">My Black Book - Create</string>
+    <string name="title_activity_splash_screen">My Black Book - Logo</string>
+    <string name="title_activity_add_book">My Black Book - Add</string>
+    <string name="title_activity_settings">My Black Book - Settings</string>
+    <string name="title_activity_open_book">My Black Book - Open</string>
+    <string name="title_activity_book_contacts">My Black Book - Contacts</string>
+    <string name="title_activity_book_images">My Black Book - Images</string>
+    <string name="title_activity_book_notes">My Black Book - Notes</string>
+    <string name="website">Website Page</string>
+    <string name="quit">Exiting&#8230; Please Wait</string>
+    <string name="settings">Settings Page</string>
+
+    <!-- Add Book Activity -->
+    <string name="add_book_image">Add a book image</string>
+    <string name="add_book_name">Book Name</string>
+    <string name="add_password">Password</string>
+    <string name="add_confirm_password">Confirm Password</string>
+    <string name="additional_password_protection">Enter a password to secure access to your new book. You will need to enter the password below each time you open this book.</string>
+    <string name="add_security_password_recovery">Check box to enter questions and answers to recover lost or forgotten password.</string>
+
+    <!-- Password Recovery Activity -->
+    <string name="security_password_recovery">To recover your books password if lost or forgotten, enter the recovery questions and answers below.</string>
+    <string name="security_question_1">First Question</string>
+    <string name="security_answer_1">First Answer</string>
+    <string name="security_question_2">Second Question</string>
+    <string name="security_answer_2">Second Answer</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_activity_custom_menu">CustomMenuActivity</string>
+    <string name="title_activity_overlay">OverlayActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_exit">ExitActivity</string>
+
+    <!-- Menu Items -->
+    <string name="menu_delete">Delete</string>
+    <string name="menu_settings">Settings</string>
+
+
+</resources>

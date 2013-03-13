@@ -1,0 +1,173 @@
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+ 	android:layout_height="fill_parent"
+ 	android:layout_width="fill_parent"
+ 	android:background="@color/background"
+  	android:isScrollContainer="true">
+  
+	<LinearLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/background"
+	    android:orientation="vertical"
+	    tools:context=".AddBookActivity" >
+
+	    <ImageButton
+	        android:id="@+id/add_image_button"
+	        style="@style/ImageButton"
+	        android:layout_marginTop="20dp"
+	        android:background="@color/background"
+	        android:contentDescription="@string/add_book_image"
+	        android:src="@drawable/ic_pick_a_book" />
+
+	    <EditText
+	        android:id="@+id/add_book_name"
+	        style="@style/TextEdit24"
+	        android:layout_marginTop="25dp"
+	        android:background="@drawable/rounded_edittext"
+	        android:hint="@string/add_book_name"
+	        android:inputType="text|textCapWords" />
+
+	    <TextView
+		    android:id="@+id/additional_password_textview"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="10dp"
+		   	android:layout_marginLeft="10dp"
+		   	android:layout_marginBottom="10dp"
+		    android:background="@color/background"
+		    android:text="@string/additional_password_protection"
+		    android:textColor="@color/light_grey" 
+		    android:textSize="14sp"/>
+	    
+	    <EditText
+	        android:id="@+id/add_password"
+	        style="@style/TextEdit24"
+	        android:layout_marginTop="2dp"
+	        android:background="@drawable/top_rounded_edittext"
+	        android:hint="@string/add_password"
+	        android:inputType="textPassword" />
+
+	    <EditText
+	        android:id="@+id/add_confirm_password"
+	        style="@style/TextEdit24"
+	        android:layout_marginBottom="20dp"
+	        android:layout_marginTop="2dp"
+	        android:background="@drawable/bottom_rounded_edittext"
+	        android:hint="@string/add_confirm_password"
+	        android:inputType="textPassword" />
+	    
+		<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:id="@+id/security_preference"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_marginLeft="20dp"
+		    android:layout_marginRight="20dp"
+		    android:orientation="horizontal"
+		    android:paddingLeft="5dip"
+		    android:paddingRight="5dip"
+		    android:paddingTop="8dip"
+		    android:paddingBottom="8dip" >
+	        	
+			<com.johnnyangel.myblackbook.ui.CustomCheckBox  
+			    android:id="@+id/security_checkbox"
+            	android:checked="false" 
+            	android:layout_width="wrap_content"
+             	android:layout_height="wrap_content"
+             	android:layout_alignParentLeft="true" 
+			   	android:background="@color/background"/>
+			    		
+			<TextView
+			    android:id="@+id/security_textview"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentRight="true"
+			   	android:layout_marginLeft="10dp"
+			    android:layout_toRightOf="@+id/security_checkbox"
+			    android:background="@color/background"
+			    android:text="@string/add_security_password_recovery"
+			    android:textColor="@color/light_grey" 
+			    android:textSize="14sp"/>
+		</RelativeLayout>	
+		
+		<LinearLayout
+		    xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:id="@+id/security_layout"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@color/background"
+		    android:orientation="vertical"
+		    android:visibility="gone">
+
+		     <EditText
+		        android:id="@+id/security_question_1"
+		        style="@style/TextEdit24"
+		        android:layout_marginTop="25dp"
+		        android:background="@drawable/top_rounded_edittext"
+		        android:hint="@string/security_question_1"
+		        android:inputType="text" />
+		    
+		    <EditText
+		        android:id="@+id/security_answer_1"
+		        style="@style/TextEdit24"
+		        android:layout_marginBottom="20dp"
+		        android:layout_marginTop="2dp"
+		        android:background="@drawable/bottom_rounded_edittext"
+		        android:hint="@string/security_answer_1"
+		        android:inputType="text" />	    
+		    
+		     <EditText
+		        android:id="@+id/security_question_2"
+		        style="@style/TextEdit24"
+		        android:layout_marginTop="10dp"
+		        android:background="@drawable/top_rounded_edittext"
+		        android:hint="@string/security_question_2"
+		        android:inputType="text" />
+		    
+		    <EditText
+		        android:id="@+id/security_answer_2"
+		        style="@style/TextEdit24"
+		        android:layout_marginBottom="20dp"
+		        android:layout_marginTop="2dp"
+		        android:background="@drawable/bottom_rounded_edittext"
+		        android:hint="@string/security_answer_2"
+		        android:inputType="text" />	
+	    
+	    </LinearLayout>
+
+		<LinearLayout android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="bottom"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+		    android:layout_marginBottom="10dp">   
+		    
+		    <ImageButton 
+		        android:id="@+id/add_book_button"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"
+				android:layout_weight="1"
+				android:layout_gravity="center_vertical|center_horizontal"
+		        android:textColorLink="@android:color/darker_gray" 
+		        android:src="@drawable/btn_check_buttonless_on"
+		        android:contentDescription="@string/add_button"/>
+		    
+		    <ImageButton 
+		        android:id="@+id/cancel_book_button"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"
+				android:layout_weight="1"
+				android:layout_gravity="center_vertical|center_horizontal"
+		        android:textColorLink="@android:color/darker_gray"
+		        android:src="@drawable/ic_delete" 
+		        android:contentDescription="@string/cancel_button"/>
+		    
+	   	</LinearLayout>
+	    
+	</LinearLayout>
+	
+</ScrollView>

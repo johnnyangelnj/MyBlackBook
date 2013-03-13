@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/MyBlackBook" xmlns:tns="http://www.example.org/MyBlackBook" elementFormDefault="qualified">
+
+<xs:simpleType name="nameprefixenumtype">
+    <xs:restriction base="xs:normalizedString">
+        <xs:enumeration value="Mr"/>
+        <xs:enumeration value="Mrs"/>
+		<xs:enumeration value="Miss"/>
+		<xs:enumeration value="Dr"/>
+		<xs:enumeration value="PHD"/>
+		<xs:enumeration value="Master"/>
+		<xs:enumeration value="Prof"/>
+		<xs:enumeration value="Atty"/>
+		<xs:enumeration value="Hon"/>
+		<xs:enumeration value="Pres"/>
+		<xs:enumeration value="Gov"/>
+		<xs:enumeration value="Coach"/>
+		<xs:enumeration value="Ofc"/>
+		<xs:enumeration value="Rev"/>
+        <xs:enumeration value="Other"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="addressenumtype">
+    <xs:restriction base="xs:normalizedString">
+        <xs:enumeration value="Home"/>
+        <xs:enumeration value="Office"/>
+        <xs:enumeration value="Other"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="phonenumberenumtype">
+    <xs:restriction base="xs:normalizedString">
+        <xs:enumeration value="Mobile"/>
+        <xs:enumeration value="Home"/>
+		<xs:enumeration value="Office"/>
+		<xs:enumeration value="Fax"/>
+		<xs:enumeration value="Pager"/>
+        <xs:enumeration value="Other"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="connectionenumtype">
+    <xs:restriction base="xs:normalizedString">
+        <xs:enumeration value="Aol"/>
+        <xs:enumeration value="Yahoo"/>
+		<xs:enumeration value="Google"/>
+		<xs:enumeration value="Facebook"/>
+		<xs:enumeration value="Twitter"/>
+        <xs:enumeration value="Other"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="ImageIdType">
+	<xs:annotation>
+		<xs:documentation>
+			MyBlackBook Image Reference
+		</xs:documentation>
+		<xs:appinfo>
+			Associated Image
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:sequence>
+		<xs:element name="uri" type="xs:string"/>
+	</xs:sequence>
+	<xs:attribute name="id" type="xs:positiveInteger" />
+</xs:complexType>
+
+<xs:complexType name="ImageType">
+	<xs:annotation>
+		<xs:documentation>
+			MyBlackBook Image 
+		</xs:documentation>
+		<xs:appinfo>
+			Image Information
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:sequence>
+		<xs:element name="image">
+			<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"/>
+				<xs:element name="desctiption" type="xs:string"/>
+				<xs:element name="size" type="xs:positiveInteger"/>
+				<xs:element name="uri" type="xs:string"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:positiveInteger" />
+			</xs:complexType>
+		</xs:element>
+	</xs:sequence>
+	<xs:attribute name="id" type="xs:positiveInteger" />
+</xs:complexType>
+
+<xs:complexType name="PasswordType">
+	<xs:annotation>
+		<xs:documentation>
+			MyBlackBook Password Reference
+		</xs:documentation>
+		<xs:appinfo>
+			Password Information
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:sequence>
+		<xs:element name="passcode" type="xs:string"/>
+		<xs:element name="expire_date" type="xs:string"/>
+	</xs:sequence>
+	<xs:attribute name="id" type="xs:positiveInteger" />
+</xs:complexType>
+
+<xs:complexType name="PasswordRecoveryType">
+	<xs:annotation>
+		<xs:documentation>
+			MyBlackBook Password Recovery
+		</xs:documentation>
+		<xs:appinfo>
+			Password Recovery Information
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:sequence>
+		<xs:element name="security" minOccurs="0" maxOccurs="2">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="question" type="xs:string"/>
+					<xs:element name="answer" type="xs:string"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:positiveInteger" />
+			</xs:complexType>
+		</xs:element>
+	</xs:sequence>
+    <xs:attribute name="id" type="xs:positiveInteger" />
+</xs:complexType>
+
+
+<xs:complexType name="NameType">
+	<xs:annotation>
+		<xs:documentation>
+			MyBlackBook Name
+		</xs:documentation>
+		<xs:appinfo>
+			User Name information
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:sequence>
+		<xs:element name="display" type="xs:string"/>
+		<xs:element name="first" type="xs:string"/>
+		<xs:element name="middle" minOccurs="0"	type="xs:string"/>
+		<xs:element name="last" minOccurs="0" type="xs:string"/>
+		<xs:element name="suffix" minOccurs="0"	type="xs:string"/>
+		<xs:element name="other" minOccurs="0" type="xs:string"/>
+	</xs:sequence>
+	<xs:attribute name="id" type="xs:positiveInteger" />
+	<xs:attribute name="type" type="tns:nameprefixenumtype" />
+</xs:complexType>
+
+<xs:complexType name="AddressType">
+	<xs:annotation>
+		<xs:documentation>
+			MyBlackBook Address
+		</xs:documentation>
+		<xs:appinfo>
+			Contact information
+		</xs:appinfo>
+	</xs:annotation>
+		<xs:sequence>
+			<xs:element name="address" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="street"  type="xs:string"/>
+						<xs:element name="city"    type="xs:string"/>
+						<xs:element name="state"   type="xs:string"/>
+						<xs:element name="zip"     type="xs:positiveInteger"/>
+						<xs:element name="state"   type="xs:string"/>
+						<xs:element name="country" type="xs:string"/>
+						<xs:element name="other" minOccurs="0" maxOccurs="1" type="xs:string"/>
+					</xs:sequence>
+					<xs:attribute name="id" type="xs:positiveInteger" />
+					<xs:attribute name="type" type="tns:addressenumtype" />
+				</xs:complexType>
+			</xs:element>
+	    </xs:sequence>
+	    <xs:attribute name="id" type="xs:positiveInteger" />
+ </xs:complexType>
+ 
+ <xs:complexType name="PhoneNumberType">
+	<xs:annotation>
+		<xs:documentation>
+			MyBlackBook Phone Number
+		</xs:documentation>
+		<xs:appinfo>
+			Contact information
+		</xs:appinfo>
+	</xs:annotation>
+		<xs:sequence>
+			<xs:element name="phone_number"  minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="international" type="xs:positiveInteger"/>
+						<xs:element name="npa" type="xs:positiveInteger"/>
+						<xs:element name="exchange" type="xs:positiveInteger"/>
+						<xs:element name="line" type="xs:positiveInteger"/>
+						<xs:element name="extension" type="xs:positiveInteger"/>
+						<xs:element name="other" minOccurs="0" type="xs:string"/>
+					</xs:sequence>
+					<xs:attribute name="id" type="xs:positiveInteger" />
+					<xs:attribute name="type" type="tns:phonenumberenumtype" />
+				</xs:complexType>
+			</xs:element>
+	    </xs:sequence>
+	    <xs:attribute name="id" type="xs:positiveInteger" />
+ </xs:complexType>
+ 
+  <xs:complexType name="EmailType">
+	<xs:annotation>
+		<xs:documentation>
+			MyBlackBook Email
+		</xs:documentation>
+		<xs:appinfo>
+			Contact information
+		</xs:appinfo>
+	</xs:annotation>
+		<xs:sequence>
+			<xs:element name="email"  minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+					<xs:element name="address" type="xs:string" />
+					</xs:sequence>
+					<xs:attribute name="id" type="xs:positiveInteger" />
+				</xs:complexType>
+			</xs:element>
+	    </xs:sequence>
+	    <xs:attribute name="id" type="xs:positiveInteger" />
+ </xs:complexType>
+ 
+  <xs:complexType name="ConnectionType">
+	<xs:annotation>
+		<xs:documentation>
+			MyBlackBook Connection
+		</xs:documentation>
+		<xs:appinfo>
+			Contact information
+		</xs:appinfo>
+	</xs:annotation>
+		<xs:sequence>
+			<xs:element name="connection"  minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+					<xs:element name="username" type="xs:string" />
+					<xs:element name="other" minOccurs="0" maxOccurs="1" type="xs:string" />
+					</xs:sequence>
+					<xs:attribute name="id" type="xs:positiveInteger" />
+					<xs:attribute name="type" type="tns:connectionenumtype" />
+				</xs:complexType>
+			</xs:element>
+	    </xs:sequence>
+	    <xs:attribute name="id" type="xs:positiveInteger" />
+</xs:complexType>
+ 
+<xs:complexType name="NoteType">
+	<xs:annotation>
+		<xs:documentation>
+			MyBlackBook Note 
+		</xs:documentation>
+		<xs:appinfo>
+			Note Information
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:sequence>
+		<xs:element name="note" minOccurs="0" maxOccurs="unbounded">
+			<xs:complexType>
+			<xs:sequence>
+				<xs:element name="title" type="xs:string"/>
+				<xs:element name="desctiption" type="xs:string"/>
+				<xs:element name="modify_date" type="xs:string"/>
+				<xs:element name="create_date" type="xs:string"/>
+				<xs:element name="message" type="xs:string"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:positiveInteger" />
+			</xs:complexType>
+		</xs:element>
+	</xs:sequence>
+	<xs:attribute name="id" type="xs:positiveInteger" />
+</xs:complexType>
+
+<xs:complexType name="ContactType">
+	<xs:annotation>
+		<xs:documentation>
+			MyBlackBook Contact Information
+		</xs:documentation>
+		<xs:appinfo>
+			Contact information
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:sequence>
+		<xs:element name="contact" minOccurs="0" maxOccurs="unbounded">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="name" minOccurs="1" maxOccurs="1" type="tns:NameType"/>
+					<xs:element name="birth_date" type="xs:string"/>
+					<xs:element name="image_id" minOccurs="0" maxOccurs="1" type="tns:ImageIdType"/>
+					<xs:element name="addressess" minOccurs="0" maxOccurs="unbounded" type="tns:AddressType"/>
+					<xs:element name="phonenumbers" minOccurs="0" maxOccurs="unbounded" type="tns:PhoneNumberType"/>
+					<xs:element name="emails" minOccurs="0" maxOccurs="unbounded" type="tns:EmailType"/>
+					<xs:element name="connections" minOccurs="0" maxOccurs="unbounded" type="tns:ConnectionType"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:positiveInteger" />
+			</xs:complexType>
+		</xs:element>
+	</xs:sequence>
+	<xs:attribute name="id" type="xs:positiveInteger" />
+ </xs:complexType>
+
+<xs:complexType name="BookType">
+  <xs:sequence>
+    <xs:element name="title" type="xs:string"/>
+    <xs:element name="image_id" minOccurs="0" maxOccurs="1" type="tns:ImageIdType"/>
+    <xs:element name="password" minOccurs="0" maxOccurs="1" type="tns:PasswordType"/>   
+    <xs:element name="modify_date" type="xs:string"/>
+    <xs:element name="create_date" type="xs:string"/>
+    <xs:element name="password_recovery" minOccurs="0" maxOccurs="unbounded" type="tns:PasswordRecoveryType"/>
+    <xs:element name="contacts" minOccurs="0" maxOccurs="unbounded" type="tns:ContactType"/> 
+    <xs:element name="images" minOccurs="0" maxOccurs="unbounded" type="tns:ImageType"/>
+    <xs:element name="notes" minOccurs="0" maxOccurs="unbounded" type="tns:NoteType"/>
+  </xs:sequence>
+  <xs:attribute name="id" type="xs:positiveInteger" />
+</xs:complexType>
+
+<xs:element name="book" type="tns:BookType"/>
+
+</xs:schema>
