@@ -127,46 +127,46 @@ public final class R {
     public static final class string {
         /**  Add Book Activity 
          */
-        public static final int add_book_image=0x7f05000c;
-        public static final int add_book_name=0x7f05000d;
+        public static final int add_book_image=0x7f050010;
+        public static final int add_book_name=0x7f050011;
         public static final int add_button=0x7f050003;
-        public static final int add_confirm_password=0x7f05000f;
-        public static final int add_password=0x7f05000e;
-        public static final int add_security_password_recovery=0x7f050011;
-        public static final int additional_password_protection=0x7f050010;
+        public static final int add_confirm_password=0x7f050013;
+        public static final int add_password=0x7f050012;
+        public static final int add_security_password_recovery=0x7f050015;
+        public static final int additional_password_protection=0x7f050014;
         public static final int app_name=0x7f050000;
         public static final int cancel_button=0x7f050004;
-        public static final int hello_world=0x7f05001c;
+        public static final int hello_world=0x7f050020;
         public static final int imageDescription=0x7f050002;
         /**  Menu Items 
          */
-        public static final int menu_delete=0x7f05001e;
-        public static final int menu_settings=0x7f05001f;
-        public static final int quit=0x7f05000a;
-        public static final int security_answer_1=0x7f050014;
-        public static final int security_answer_2=0x7f050016;
+        public static final int menu_delete=0x7f050022;
+        public static final int menu_settings=0x7f050023;
+        public static final int quit=0x7f05000e;
+        public static final int security_answer_1=0x7f050018;
+        public static final int security_answer_2=0x7f05001a;
         /**  Password Recovery Activity 
          */
-        public static final int security_password_recovery=0x7f050012;
-        public static final int security_question_1=0x7f050013;
-        public static final int security_question_2=0x7f050015;
-        public static final int settings=0x7f05000b;
+        public static final int security_password_recovery=0x7f050016;
+        public static final int security_question_1=0x7f050017;
+        public static final int security_question_2=0x7f050019;
+        public static final int settings=0x7f05000f;
         public static final int status=0x7f050001;
         public static final int title_activity_add_book=0x7f050007;
-        public static final int title_activity_book_contacts=0x7f050021;
-        public static final int title_activity_book_images=0x7f050022;
-        public static final int title_activity_book_notes=0x7f050023;
+        public static final int title_activity_book_contacts=0x7f05000a;
+        public static final int title_activity_book_images=0x7f05000b;
+        public static final int title_activity_book_notes=0x7f05000c;
         public static final int title_activity_create_book_navigation=0x7f050005;
-        public static final int title_activity_custom_menu=0x7f05001a;
-        public static final int title_activity_exit=0x7f05001d;
-        public static final int title_activity_open_book=0x7f050020;
-        public static final int title_activity_overlay=0x7f05001b;
+        public static final int title_activity_custom_menu=0x7f05001e;
+        public static final int title_activity_exit=0x7f050021;
+        public static final int title_activity_open_book=0x7f050009;
+        public static final int title_activity_overlay=0x7f05001f;
         public static final int title_activity_settings=0x7f050008;
         public static final int title_activity_splash_screen=0x7f050006;
-        public static final int title_section1=0x7f050019;
-        public static final int title_section2=0x7f050018;
-        public static final int title_section3=0x7f050017;
-        public static final int website=0x7f050009;
+        public static final int title_section1=0x7f05001d;
+        public static final int title_section2=0x7f05001c;
+        public static final int title_section3=0x7f05001b;
+        public static final int website=0x7f05000d;
     }
     public static final class style {
         /** 
